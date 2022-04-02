@@ -64,7 +64,7 @@ const AppProvider = ({ children }) => {
 
   // fetch jobs
   const fetchJobs = async () => {
-    // setLoading();
+    setLoading();
     try {
       const { data } = await axios.get(`/jobs`);
       dispatch({ type: "FETCH_JOBS_SUCCESS", payload: data.jobs });
@@ -100,7 +100,7 @@ const AppProvider = ({ children }) => {
 
   // fetch each job Using id
   const fetchSingleJob = async (jobId) => {
-    // setLoading();
+    setLoading();
     try {
       const { data } = await axios.get(`/jobs/${jobId}`);
       dispatch({ type: "FETCH_SINGLE_JOB_SUCCESS", payload: data.job });
