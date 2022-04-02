@@ -39,7 +39,7 @@ function Register() {
         <div className="container">
           {showAlert && (
             <div className="alert alert-danger">
-              there was an error, please try again
+              there was an error, email already exist, please try again.
             </div>
           )}
           <form className="form" onSubmit={onSubmit}>
