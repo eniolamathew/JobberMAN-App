@@ -1,6 +1,6 @@
 import axios from "axios";
 import "../axios";
-import React, { useContext, useEffect, useReducer } from "react";
+import React, { useContext, useEffect, useReducer, useCallback } from "react";
 import reducer from "./reducer";
 
 const AppContext = React.createContext();
@@ -63,7 +63,7 @@ const AppProvider = ({ children }) => {
   };
 
   // fetch jobs
-  const fetchJobs = async () => {
+  const fetchJobs = useCallback(async () => {
     setLoading();
     try {
       const { data } = await axios.get(`/jobs`);
@@ -72,7 +72,7 @@ const AppProvider = ({ children }) => {
       dispatch({ type: "FETCH_JOBS_ERROR" });
       logout();
     }
-  };
+  }, []);
 
   // create job
   const createJob = async (userInput) => {
@@ -99,7 +99,7 @@ const AppProvider = ({ children }) => {
   };
 
   // fetch each job Using id
-  const fetchSingleJob = async (jobId) => {
+  const fetchSingleJob = useCallback(async (jobId) => {
     setLoading();
     try {
       const { data } = await axios.get(`/jobs/${jobId}`);
@@ -107,7 +107,7 @@ const AppProvider = ({ children }) => {
     } catch (error) {
       dispatch({ type: "FETCH_SINGLE_JOB_ERROR" });
     }
-  };
+  }, []);
 
   //edit a job using the id
   const editJob = async (jobId, userInput) => {

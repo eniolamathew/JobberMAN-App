@@ -24,7 +24,7 @@ function Update() {
 
   useEffect(() => {
     fetchSingleJob(id);
-  }, [id]);
+  }, [id, fetchSingleJob]);
 
   useEffect(() => {
     if (editItem) {

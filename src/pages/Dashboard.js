@@ -24,7 +24,7 @@ function Dashboard() {
   };
   useEffect(() => {
     fetchJobs();
-  }, []);
+  }, [fetchJobs]);
   return (
     <>
       <Navbar />
