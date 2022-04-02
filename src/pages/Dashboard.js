@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { useGlobalContext } from "../context/appContext";
@@ -59,6 +58,7 @@ function Dashboard() {
             {isLoading ? "Adding New Job..." : "Add Job"}
           </button>
         </form>
+
         <Jobs />
       </Wrapper>
     </>
@@ -67,7 +67,6 @@ function Dashboard() {
 
 const Wrapper = styled.section`
   padding: 3rem 0;
-
   .job-form {
     background: var(--white);
     display: grid;
@@ -80,7 +79,6 @@ const Wrapper = styled.section`
     .form-input {
       padding: 0.75rem;
     }
-
     .form-input:focus {
       outline: 1px solid var(--primary-500);
     }

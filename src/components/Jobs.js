@@ -12,7 +12,6 @@ const Jobs = () => {
   if (isLoading) {
     return <div className="loading"></div>;
   }
-
   if (jobs.length < 1) {
     return (
       <EmptyContainer>

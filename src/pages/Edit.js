@@ -168,7 +168,6 @@ const Container = styled.section`
       column-gap: 0.5rem;
       align-items: center;
     }
-
     .form > p {
       text-align: left;
     }
