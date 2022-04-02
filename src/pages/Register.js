@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { useGlobalContext } from "../context/appContext";
 import { Redirect } from "react-router-dom";
 import FormRow from "../components/FormRow";
-import logo from "../assets/logo.svg";
+import logo from "../assets/log.jpg";
 
 function Register() {
   const [values, setValues] = useState({
@@ -43,7 +43,7 @@ function Register() {
             </div>
           )}
           <form className="form" onSubmit={onSubmit}>
-            <img src={logo} alt="jobio" className="logo" />
+            <img src={logo} alt="jobberMan" className="logo" />
             <h4>{values.isMember ? "Login" : "Register"}</h4>
             {/* name field */}
             {!values.isMember && (

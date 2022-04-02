@@ -3,7 +3,7 @@ import styled from "styled-components";
 import main from "../assets/main.svg";
 import { useGlobalContext } from "../context/appContext";
 import { Redirect } from "react-router-dom";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.jpg";
 
 function Home() {
   const { user } = useGlobalContext();
@@ -66,6 +66,10 @@ const Wrapper = styled.div`
     .main-img {
       display: block;
     }
+  }
+  @media (max-width: 400px) {
+    .container {
+    margin-top: 0rem;
   }
 `;
 

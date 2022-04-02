@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.jpg";
 import { FaUserCircle, FaCaretDown } from "react-icons/fa";
 import { useGlobalContext } from "../context/appContext";
 
