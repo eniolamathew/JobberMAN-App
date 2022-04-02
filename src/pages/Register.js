@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { useGlobalContext } from "../context/appContext";
 import { Redirect } from "react-router-dom";
 import FormRow from "../components/FormRow";
-import logo from "../assets/log.jpg";
+import logo from "../assets/logo1.jpg";
 
 function Register() {
   const [values, setValues] = useState({
